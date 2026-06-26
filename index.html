@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Opulence & Heirloom is an ultra-premium boutique based in India. Specializing in ladies western wear, luxury contemporary ethnic wear, kids occasion outfits, and bespoke custom fittings. Discover timeless style.">
+  <meta name="keywords" content="Opulence and Heirloom, luxury boutique India, ladies western wear, kids designer boutique, contemporary ethnic wear, custom fittings Delhi, premium linen clothing">
+  <meta name="author" content="Opulence & Heirloom">
+  
+  <title>Opulence & Heirloom | Luxury Ladies & Kids Fashion Boutique</title>
+  
+  <!-- Preconnect to Google Fonts for performance optimization -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+  <!-- Custom Luxury Cursor Elements -->
+  <div class="custom-cursor" aria-hidden="true"></div>
+  <div class="custom-cursor-ring" aria-hidden="true"></div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="header" id="main-header">
+    <nav class="nav-container" aria-label="Primary Navigation">
+      <a href="#home" class="logo" id="brand-logo" aria-label="Opulence and Heirloom homepage">
+        <span class="logo__brand">Opulence & Heirloom</span>
+        <span class="logo__tagline">Ladies & Kids Boutique</span>
+      </a>
+
+      <!-- Navigation Menu -->
+      <ul class="nav-menu" id="nav-links">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#story" class="nav-link">Story</a></li>
+        <li><a href="#collection" class="nav-link">Collection</a></li>
+        <li><a href="#lookbook" class="nav-link">Lookbook</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#visit" class="nav-link">Visit</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#visit" class="btn-contact" id="btn-header-contact">Book Fitting</a>
+        <button class="nav-toggle" id="nav-hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    
+    <!-- Hero Section -->
+    <section class="hero-split" id="home" aria-label="Introduction Banner">
+      <div class="hero-split__text">
+        <div class="hero-split__text-inner">
+          <span class="hero-split__brand-tag">Opulence &amp; Heirloom</span>
+          <h1 class="hero-split__title">Timeless Style.<br>Crafted for Every Generation.</h1>
+          <p class="hero-split__sub">Curated ladies and kids fashion designed for modern elegance.</p>
+          <div class="hero-split__actions">
+            <a href="#collection" class="btn btn--primary-dark">Explore Collection</a>
+            <a href="#experience" class="btn btn--secondary-dark">Visit Boutique</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-split__image-container">
+        <div class="hero-split__parallax-wrapper">
+          <img class="hero-split__img" src="./assets/hero_mom_daughter.webp" alt="Elegant Indian mother and daughter in a sunlit boutique interior wearing linen dresses" fetchpriority="high">
+        </div>
+        <div class="hero-split__overlay"></div>
+      </div>
+    </section>
+
+    <!-- About / Story Section -->
+    <section class="section" id="story" aria-label="About Our Boutique">
+      <div class="about-grid">
+        <div class="about-img-container reveal-up">
+          <img class="about-img" src="./assets/about_story.webp" alt="Model posing in a sophisticated draped linen dress in light sage color" loading="lazy">
+        </div>
+        <div class="about-info reveal-up">
+          <span class="section-header__subtitle">The Story</span>
+          <h2 class="about-info__serif">Crafting Legacy, Linen by Linen</h2>
+          <p class="about-info__desc">
+            Opulence & Heirloom is an ultra-premium boutique dedicated to creating timeless fashion for women and children. Born from a desire to blend Scandinavian minimalism with contemporary Indian luxury, our garments represent the height of refined comfort.
+          </p>
+          <p class="about-info__desc">
+            We focus heavily on structural craftsmanship, breathable fabrics, and minimalist silhouettes that respect natural textures. Every piece in our boutique is designed to be passed down through generations—a true heirloom.
+          </p>
+          <blockquote class="about-quote">
+            "True elegance is not about being noticed, it's about being remembered."
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Collections Section -->
+    <section class="section" id="collection" aria-label="Product Collections">
+      <div class="section-header">
+        <span class="section-header__subtitle">Curated Categories</span>
+        <h2 class="section-header__title">Our Specialties</h2>
+      </div>
+
+      <div class="collections-grid">
+        <!-- Item 1 -->
+        <div class="collection-item reveal-stagger-1" id="cat-western" tabindex="0">
+          <div class="collection-item__image-box">
+            <img class="collection-item__img" src="./assets/ladies_western.webp" alt="Ladies Western Wear collection" loading="lazy">
+          </div>
+          <div class="collection-item__info">
+            <h3 class="collection-item__title">Western Wear</h3>
+            <span class="collection-item__cta">Explore Silhouettes</span>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="collection-item reveal-stagger-2" id="cat-ethnic" tabindex="0">
+          <div class="collection-item__image-box">
+            <img class="collection-item__img" src="./assets/ladies_ethnic.webp" alt="Ladies Ethnic Wear collection" loading="lazy">
+          </div>
+          <div class="collection-item__info">
+            <h3 class="collection-item__title">Ethnic Wear</h3>
+            <span class="collection-item__cta">View Drapes</span>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="collection-item reveal-stagger-3" id="cat-casual" tabindex="0">
+          <div class="collection-item__image-box">
+            <img class="collection-item__img" src="./assets/resort_wear.webp" alt="Casual & Resort Wear collection" loading="lazy">
+          </div>
+          <div class="collection-item__info">
+            <h3 class="collection-item__title">Casual &amp; Resort</h3>
+            <span class="collection-item__cta">Discover Linen</span>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="collection-item reveal-stagger-1" id="cat-kids" tabindex="0">
+          <div class="collection-item__image-box">
+            <img class="collection-item__img" src="./assets/kids_fashion.webp" alt="Kids Fashion & Girls Festive Dress collection" loading="lazy">
+          </div>
+          <div class="collection-item__info">
+            <h3 class="collection-item__title">Kids Occasion</h3>
+            <span class="collection-item__cta">Explore Girls Festive</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lounge & Casuals Section -->
+    <section class="section" id="lounge-casual" aria-label="Lounge and Casual Wear Collection">
+      <div class="section-header">
+        <span class="section-header__subtitle">Leisure Edit</span>
+        <h2 class="section-header__title">Lounge &amp; Casuals</h2>
+      </div>
+
+      <div class="lounge-carousel-wrapper reveal-up">
+        <div class="lounge-carousel" id="lounge-slider">
+          <!-- Item 1 -->
+          <div class="lounge-card" tabindex="0">
+            <div class="lounge-card__image-box">
+              <img src="./assets/lounge_01.webp" alt="Model wearing ivory cotton kurti and blue jeans" loading="lazy">
+            </div>
+            <div class="lounge-card__info">
+              <span class="lounge-card__num">01</span>
+              <h3 class="lounge-card__title">Classic Ivory Kurti</h3>
+              <p class="lounge-card__desc">Fine organic cotton with soft denim details</p>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="lounge-card" tabindex="0">
+            <div class="lounge-card__image-box">
+              <img src="./assets/lounge_02.webp" alt="Model wearing sage green linen lounge set" loading="lazy">
+            </div>
+            <div class="lounge-card__info">
+              <span class="lounge-card__num">02</span>
+              <h3 class="lounge-card__title">Sage Linen Coordinates</h3>
+              <p class="lounge-card__desc">Relaxed lounge coordinates in breathing sage</p>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="lounge-card" tabindex="0">
+            <div class="lounge-card__image-box">
+              <img src="./assets/lounge_03.webp" alt="Model wearing pastel peach cotton kurti" loading="lazy">
+            </div>
+            <div class="lounge-card__info">
+              <span class="lounge-card__num">03</span>
+              <h3 class="lounge-card__title">Peach Blossom Kurti</h3>
+              <p class="lounge-card__desc">Subtle hand embroidery on pure malmal cotton</p>
+            </div>
+          </div>
+          <!-- Item 4 -->
+          <div class="lounge-card" tabindex="0">
+            <div class="lounge-card__image-box">
+              <img src="./assets/lounge_04.webp" alt="Model wearing distressed denim and beige linen shirt" loading="lazy">
+            </div>
+            <div class="lounge-card__info">
+              <span class="lounge-card__num">04</span>
+              <h3 class="lounge-card__title">Casual Linen &amp; Denim</h3>
+              <p class="lounge-card__desc">Scandinavian structured shirt with utility jeans</p>
+            </div>
+          </div>
+          <!-- Item 5 -->
+          <div class="lounge-card" tabindex="0">
+            <div class="lounge-card__image-box">
+              <img src="./assets/lounge_05.webp" alt="Model wearing soft taupe coordinates lounge set" loading="lazy">
+            </div>
+            <div class="lounge-card__info">
+              <span class="lounge-card__num">05</span>
+              <h3 class="lounge-card__title">Taupe Leisure Set</h3>
+              <p class="lounge-card__desc">Premium double-layered knit lounge coordinate</p>
+            </div>
+          </div>
+          <!-- Item 6 -->
+          <div class="lounge-card" tabindex="0">
+            <div class="lounge-card__image-box">
+              <img src="./assets/lounge_06.webp" alt="Model wearing indigo blue short kurti" loading="lazy">
+            </div>
+            <div class="lounge-card__info">
+              <span class="lounge-card__num">06</span>
+              <h3 class="lounge-card__title">Indigo Short Kurti</h3>
+              <p class="lounge-card__desc">Natural indigo dye on hand-loom cotton weave</p>
+            </div>
+          </div>
+          <!-- Item 7 -->
+          <div class="lounge-card" tabindex="0">
+            <div class="lounge-card__image-box">
+              <img src="./assets/lounge_07.webp" alt="Model wearing minimal cream linen kaftan" loading="lazy">
+            </div>
+            <div class="lounge-card__info">
+              <span class="lounge-card__num">07</span>
+              <h3 class="lounge-card__title">Ethereal Cream Kaftan</h3>
+              <p class="lounge-card__desc">Flowy minimalist silhouette with raw fringed hems</p>
+            </div>
+          </div>
+          <!-- Item 8 -->
+          <div class="lounge-card" tabindex="0">
+            <div class="lounge-card__image-box">
+              <img src="./assets/lounge_08.webp" alt="Model wearing grey knit lounge joggers" loading="lazy">
+            </div>
+            <div class="lounge-card__info">
+              <span class="lounge-card__num">08</span>
+              <h3 class="lounge-card__title">Charcoal Leisure Joggers</h3>
+              <p class="lounge-card__desc">Organic cotton-fleece jogger set for refined warmth</p>
+            </div>
+          </div>
+          <!-- Item 9 -->
+          <div class="lounge-card" tabindex="0">
+            <div class="lounge-card__image-box">
+              <img src="./assets/lounge_09.webp" alt="Model wearing dusty rose cotton kurti" loading="lazy">
+            </div>
+            <div class="lounge-card__info">
+              <span class="lounge-card__num">09</span>
+              <h3 class="lounge-card__title">Dusty Rose Kurti Set</h3>
+              <p class="lounge-card__desc">Relaxed cotton tunic styled with matching palazzo pants</p>
+            </div>
+          </div>
+          <!-- Item 10 -->
+          <div class="lounge-card" tabindex="0">
+            <div class="lounge-card__image-box">
+              <img src="./assets/lounge_10.webp" alt="Model wearing light-wash boyfriend jeans and white shirt" loading="lazy">
+            </div>
+            <div class="lounge-card__info">
+              <span class="lounge-card__num">10</span>
+              <h3 class="lounge-card__title">Boyfriend Denim &amp; White Linen</h3>
+              <p class="lounge-card__desc">Classic effortless weekend styling in pure fibers</p>
+            </div>
+          </div>
+          <!-- Item 11 -->
+          <div class="lounge-card" tabindex="0">
+            <div class="lounge-card__image-box">
+              <img src="./assets/lounge_11.webp" alt="Model wearing mustard casual linen tunic" loading="lazy">
+            </div>
+            <div class="lounge-card__info">
+              <span class="lounge-card__num">11</span>
+              <h3 class="lounge-card__title">Mustard Tunic</h3>
+              <p class="lounge-card__desc">Earthy ochre tone linen with minimalist front slit</p>
+            </div>
+          </div>
+          <!-- Item 12 -->
+          <div class="lounge-card" tabindex="0">
+            <div class="lounge-card__image-box">
+              <img src="./assets/lounge_12.webp" alt="Model wearing olive green cotton lounge robe" loading="lazy">
+            </div>
+            <div class="lounge-card__info">
+              <span class="lounge-card__num">12</span>
+              <h3 class="lounge-card__title">Olive Sanctuary Robe</h3>
+              <p class="lounge-card__desc">Premium waffle-weave cotton for slow mornings</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel Navigation -->
+        <div class="carousel-nav">
+          <button class="btn-carousel btn-carousel-prev" aria-label="Previous slide" id="lounge-prev">
+            <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <button class="btn-carousel btn-carousel-next" aria-label="Next slide" id="lounge-next">
+            <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Collection Section -->
+    <section class="section" id="featured-editorial" aria-label="Featured Fashion Campaign">
+      <div class="section-header">
+        <span class="section-header__subtitle">Campaign Edit</span>
+        <h2 class="section-header__title">The Editorial Edit</h2>
+      </div>
+
+      <div class="featured-container">
+        
+        <!-- Row 1 -->
+        <div class="featured-row">
+          <div class="featured-image-wrapper reveal-up">
+            <img class="featured-image parallax-subject" src="./assets/lookbook_1.webp" alt="Close up detailing of stitching and label on linen clothing" loading="lazy">
+          </div>
+          <div class="featured-text-wrapper reveal-up">
+            <span class="featured__category">Craftsmanship</span>
+            <h3 class="featured__title">Honest Details & Pure Textures</h3>
+            <p class="featured__desc">
+              Our organic linens are woven with patience and care. Each stitch is placed deliberately by Indian artisans to ensure seams that flow naturally, providing a premium tactile feel that is soft on the skin and keeps you calm throughout the seasons.
+            </p>
+            <a href="#visit" class="btn btn-contact">Read Details</a>
+          </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="featured-row">
+          <div class="featured-image-wrapper reveal-up">
+            <img class="featured-image parallax-subject" src="./assets/campaign_editorial_2.webp" alt="Model walking down stone arches wearing flowy cream dress" loading="lazy">
+          </div>
+          <div class="featured-text-wrapper reveal-up">
+            <span class="featured__category">Drapes</span>
+            <h3 class="featured__title">Fluid Silhouettes</h3>
+            <p class="featured__desc">
+              Drawing inspiration from Parisian elegance and contemporary Indian drapes, this series presents fluid lines that flatter without restricting. Ideal for resort afternoons, wedding sundowners, or occasion gatherings.
+            </p>
+            <a href="#visit" class="btn btn-contact">Explore Campaign</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Lookbook Section -->
+    <section class="section" id="lookbook" aria-label="Fashion Lookbook Gallery">
+      <div class="section-header">
+        <span class="section-header__subtitle">Visual Diary</span>
+        <h2 class="section-header__title">Season Lookbook</h2>
+      </div>
+
+      <div class="lookbook-grid">
+        <!-- Column 1 -->
+        <div class="lookbook-col">
+          <!-- Item 01 -->
+          <div class="lookbook-item reveal-stagger-1" tabindex="0"
+               data-fabric="Hand-woven Organic Linen-Silk blend, dyed with natural pigments, 180 GSM"
+               data-design="Contemporary draped ethnic silhouette, asymmetric layered hemline, side inseam pockets"
+               data-num="01"
+               data-title="Ethnic Modernity">
+            <div class="lookbook-item__image-box">
+              <img src="./assets/lookbook_ethnic.webp" alt="Editorial contemporary ethnic drape outfit in muted olive and linen beige" loading="lazy">
+            </div>
+            <div class="lookbook-item__caption">
+              <span class="lookbook-item__num">01</span>
+              <span class="lookbook-item__title">Ethnic Modernity</span>
+            </div>
+          </div>
+          <!-- Item 04 -->
+          <div class="lookbook-item reveal-stagger-2" tabindex="0"
+               data-fabric="Premium mulberry silk &amp; organic linen blend, soft fluid drape, subtle sheen, 130 GSM"
+               data-design="Relaxed flowy maxi dress, deep V-neck, high slit, flared sleeves with button cuffs"
+               data-num="04"
+               data-title="Flow &amp; Movement">
+            <div class="lookbook-item__image-box">
+              <img src="./assets/lookbook_flow.webp" alt="Flowing cream dress movement under stone colonnade" loading="lazy">
+            </div>
+            <div class="lookbook-item__caption">
+              <span class="lookbook-item__num">04</span>
+              <span class="lookbook-item__title">Flow &amp; Movement</span>
+            </div>
+          </div>
+          <!-- Item 07 -->
+          <div class="lookbook-item reveal-stagger-3" tabindex="0"
+               data-fabric="Lightweight organic cotton &amp; flax linen, extremely breathable, 120 GSM"
+               data-design="Breezy tier-draped sundress, adjustable drawstrings, raw fringe trim accents"
+               data-num="07"
+               data-title="Summer Solstice">
+            <div class="lookbook-item__image-box">
+              <img src="./assets/lookbook_07.webp" alt="Breezy flowing linen resort dress by olive trees" loading="lazy">
+            </div>
+            <div class="lookbook-item__caption">
+              <span class="lookbook-item__num">07</span>
+              <span class="lookbook-item__title">Summer Solstice</span>
+            </div>
+          </div>
+          <!-- Item 10 -->
+          <div class="lookbook-item reveal-stagger-1" tabindex="0"
+               data-fabric="Natural clay-dyed organic linen, mid-weight, soft-washed texture, 180 GSM"
+               data-design="Minimalist lounge coordinates, elasticated waist trouser, relaxed utility collar tunic"
+               data-num="10"
+               data-title="Nordic Earth">
+            <div class="lookbook-item__image-box">
+              <img src="./assets/lookbook_10.webp" alt="Model wearing warm clay-colored organic linen garments" loading="lazy">
+            </div>
+            <div class="lookbook-item__caption">
+              <span class="lookbook-item__num">10</span>
+              <span class="lookbook-item__title">Nordic Earth</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="lookbook-col">
+          <!-- Item 02 -->
+          <div class="lookbook-item reveal-stagger-2" tabindex="0"
+               data-fabric="100% Belgian flax organic linen, raw natural color, unbleached yarns, 220 GSM"
+               data-design="Artisanal hand-stitched detailing, reinforced seams, classic relaxed fit weave"
+               data-num="02"
+               data-title="Pure Linen Weave">
+            <div class="lookbook-item__image-box">
+              <img src="./assets/lookbook_weave.webp" alt="Bespoke linen stitch detail" loading="lazy">
+            </div>
+            <div class="lookbook-item__caption">
+              <span class="lookbook-item__num">02</span>
+              <span class="lookbook-item__title">Pure Linen Weave</span>
+            </div>
+          </div>
+          <!-- Item 05 -->
+          <div class="lookbook-item reveal-stagger-3" tabindex="0"
+               data-fabric="100% Breathable linen-cotton blend, dyed in light sage tone, 160 GSM"
+               data-design="Sleek draped slip dress, minimalist double shoulder straps, side slits, clean back neckline"
+               data-num="05"
+               data-title="Minimalist Sage">
+            <div class="lookbook-item__image-box">
+              <img src="./assets/lookbook_05.webp" alt="Draped sage green linen dress in minimalist concrete courtyard" loading="lazy">
+            </div>
+            <div class="lookbook-item__caption">
+              <span class="lookbook-item__num">05</span>
+              <span class="lookbook-item__title">Minimalist Sage</span>
+            </div>
+          </div>
+          <!-- Item 08 -->
+          <div class="lookbook-item reveal-stagger-1" tabindex="0"
+               data-fabric="Fine hand-loom luxury linen saree, spun with hand-twisted metallic silver zari threads, 110 GSM"
+               data-design="Traditional contemporary Indian drape, custom fringe border, modern clean pleating"
+               data-num="08"
+               data-title="Heritage Thread">
+            <div class="lookbook-item__image-box">
+              <img src="./assets/lookbook_08.webp" alt="Two Indian women in luxury heritage ivory linen drapes" loading="lazy">
+            </div>
+            <div class="lookbook-item__caption">
+              <span class="lookbook-item__num">08</span>
+              <span class="lookbook-item__title">Heritage Thread</span>
+            </div>
+          </div>
+          <!-- Item 11 -->
+          <div class="lookbook-item reveal-stagger-2" tabindex="0"
+               data-fabric="100% Organic linen, skin-friendly dyes, light blue wash, 150 GSM"
+               data-design="Kids matching holiday play sets, relaxed drawstring shorts, collarless easy shirt"
+               data-num="11"
+               data-title="Playful Linen">
+            <div class="lookbook-item__image-box">
+              <img src="./assets/lookbook_11.webp" alt="Kids in matching light blue linen occasion wear in garden" loading="lazy">
+            </div>
+            <div class="lookbook-item__caption">
+              <span class="lookbook-item__num">11</span>
+              <span class="lookbook-item__title">Playful Linen</span>
+            </div>
+          </div>
+          <!-- Item 13 -->
+          <div class="lookbook-item reveal-stagger-3" tabindex="0"
+               data-fabric="Indigo-fermented organic linen, double-dyed, rich natural variance, 170 GSM"
+               data-design="Relaxed shirt jacket, band collar, patch utility pockets, flat-felled seam construction"
+               data-num="13"
+               data-title="Bespoke Indigo">
+            <div class="lookbook-item__image-box">
+              <img src="./assets/lookbook_13.webp" alt="Organic linen clothing in deep natural indigo blue" loading="lazy">
+            </div>
+            <div class="lookbook-item__caption">
+              <span class="lookbook-item__num">13</span>
+              <span class="lookbook-item__title">Bespoke Indigo</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="lookbook-col">
+          <!-- Item 03 -->
+          <div class="lookbook-item reveal-stagger-3" tabindex="0"
+               data-fabric="Super-soft organic combed cotton &amp; linen blend, hypoallergenic, breathable, 140 GSM"
+               data-design="Kids occasion tunic dress with soft gathering, minimal round collar, natural wood button back closure"
+               data-num="03"
+               data-title="Kids Festive Edit">
+            <div class="lookbook-item__image-box">
+              <img src="./assets/lookbook_kids.webp" alt="Girl in cream linen festive outfit standing with wooden horse" loading="lazy">
+            </div>
+            <div class="lookbook-item__caption">
+              <span class="lookbook-item__num">03</span>
+              <span class="lookbook-item__title">Kids Festive Edit</span>
+            </div>
+          </div>
+          <!-- Item 06 -->
+          <div class="lookbook-item reveal-stagger-1" tabindex="0"
+               data-fabric="Mid-weight organic European linen, structured and crisp, 240 GSM"
+               data-design="Deconstructed tailored linen blazer, single-breasted, notched lapels, shell button details"
+               data-num="06"
+               data-title="Linen Tailoring">
+            <div class="lookbook-item__image-box">
+              <img src="./assets/lookbook_06.webp" alt="Designer fitting beige linen blazer on model close-up" loading="lazy">
+            </div>
+            <div class="lookbook-item__caption">
+              <span class="lookbook-item__num">06</span>
+              <span class="lookbook-item__title">Linen Tailoring</span>
+            </div>
+          </div>
+          <!-- Item 09 -->
+          <div class="lookbook-item reveal-stagger-2" tabindex="0"
+               data-fabric="Structured organic flax linen, high-density weave, opaque finish, 200 GSM"
+               data-design="Asymmetric sculpted top, structural side draping, high neckline, clean geometric lines"
+               data-num="09"
+               data-title="Sculpted Linen">
+            <div class="lookbook-item__image-box">
+              <img src="./assets/lookbook_09.webp" alt="Structured asymmetric white linen top and trousers" loading="lazy">
+            </div>
+            <div class="lookbook-item__caption">
+              <span class="lookbook-item__num">09</span>
+              <span class="lookbook-item__title">Sculpted Linen</span>
+            </div>
+          </div>
+          <!-- Item 12 -->
+          <div class="lookbook-item reveal-stagger-3" tabindex="0"
+               data-fabric="Sheer luxury organza-linen blend, translucent weave, raw silk accents, 90 GSM"
+               data-design="Fluid wrap dupatta scarf, hand-rolled hems, minimalist fine stitch border"
+               data-num="12"
+               data-title="Ethereal Drapes">
+            <div class="lookbook-item__image-box">
+              <img src="./assets/lookbook_12.webp" alt="Model posing with translucent ivory linen-silk dupatta scarf" loading="lazy">
+            </div>
+            <div class="lookbook-item__caption">
+              <span class="lookbook-item__num">12</span>
+              <span class="lookbook-item__title">Ethereal Drapes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section" id="why-us" aria-label="Brand Core Values">
+      <div class="section-header">
+        <span class="section-header__subtitle">Our Values</span>
+        <h2 class="section-header__title">The Boutique Difference</h2>
+      </div>
+
+      <div class="values-grid">
+        <!-- Card 1 -->
+        <div class="value-card reveal-stagger-1">
+          <div class="value-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3 class="value-card__title">Handcrafted Designs</h3>
+          <p class="value-card__desc">Every silhouette is meticulously created to ensure perfection and unique character.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="value-card reveal-stagger-2">
+          <div class="value-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <h3 class="value-card__title">Premium Fabrics</h3>
+          <p class="value-card__desc">We source the finest organic linens, mulberry silks, and soft combed cottons.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="value-card reveal-stagger-3">
+          <div class="value-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 class="value-card__title">Custom Fittings</h3>
+          <p class="value-card__desc">Tailored to your body measurements for an absolute, unmatched luxury fit.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Boutique Virtual Experience (Walkthrough) -->
+    <section class="section" id="experience" aria-label="Boutique Virtual Showroom">
+      <div class="section-header">
+        <span class="section-header__subtitle">Virtual Visit</span>
+        <h2 class="section-header__title">Boutique Experience</h2>
+      </div>
+
+      <div class="walkthrough-container reveal-up" id="virtual-showroom">
+        <div class="walkthrough-pan" id="showroom-pan">
+          <img class="walkthrough-img" src="./assets/boutique_interior.webp" alt="Luxury showroom interior panorama featuring light oak displays and linen curtains" draggable="false">
+          
+          <!-- Interactive Hotspots -->
+          <div class="hotspot hotspot--fitting" tabindex="0" aria-label="Fitting Lounge Hotspot">
+            <div class="hotspot-pulse"></div>
+            <div class="hotspot-dot"></div>
+            <div class="hotspot-tooltip">
+              <h4 class="hotspot-tooltip__title">Custom Fitting Lounge</h4>
+              <p class="hotspot-tooltip__desc">A quiet, warm oak space designed for private consultations, styling reviews, and tailored measurements.</p>
+            </div>
+          </div>
+
+          <div class="hotspot hotspot--racks" tabindex="0" aria-label="The Racks Hotspot">
+            <div class="hotspot-pulse"></div>
+            <div class="hotspot-dot"></div>
+            <div class="hotspot-tooltip">
+              <h4 class="hotspot-tooltip__title">The Linen Rack</h4>
+              <p class="hotspot-tooltip__desc">Browse our seasonal collection of ladies western silhouettes and coordinating kids linen dresses.</p>
+            </div>
+          </div>
+
+          <div class="hotspot hotspot--curator" tabindex="0" aria-label="Curator Display Hotspot">
+            <div class="hotspot-pulse"></div>
+            <div class="hotspot-dot"></div>
+            <div class="hotspot-tooltip">
+              <h4 class="hotspot-tooltip__title">Curator Table</h4>
+              <p class="hotspot-tooltip__desc">A handpicked assortment of natural fiber accessories, organic perfumes, and festive silk blends.</p>
+            </div>
+          </div>
+
+        </div>
+        <div class="walkthrough-hint">Drag left or right to explore boutique interior</div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section" id="testimonials" aria-label="Client Testimonials">
+      <div class="section-header">
+        <span class="section-header__subtitle">Kind Words</span>
+        <h2 class="section-header__title">Boutique Voices</h2>
+      </div>
+
+      <div class="testimonials-container reveal-up">
+        <div class="testimonial-wrapper">
+          <!-- Slide 1 -->
+          <div class="testimonial-slide">
+            <p class="testimonial-quote">"The organic linens are incredibly soft, and the fit was custom tailored to absolute perfection. A truly premium luxury experience in India."</p>
+            <div class="testimonial-author">
+              <span class="testimonial-author__name">Ananya S.</span>
+              <span class="testimonial-author__location">New Delhi</span>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="testimonial-slide">
+            <p class="testimonial-quote">"Found the most beautiful matching festive dresses for myself and my daughter. The designs are elegant, minimal, and understated."</p>
+            <div class="testimonial-author">
+              <span class="testimonial-author__name">Priya M.</span>
+              <span class="testimonial-author__location">Mumbai</span>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="testimonial-slide">
+            <p class="testimonial-quote">"Their western wear fits like a glove. It has that clean Scandinavian minimalism that is so rare and refreshing to find."</p>
+            <div class="testimonial-author">
+              <span class="testimonial-author__name">Meera K.</span>
+              <span class="testimonial-author__location">Bangalore</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonials-nav">
+          <button class="btn-test-nav btn-test-prev" aria-label="Previous testimonial">
+            <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <button class="btn-test-nav btn-test-next" aria-label="Next testimonial">
+            <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Instagram Gallery Grid -->
+    <section class="section" id="instagram-gallery" aria-label="Instagram Gallery Feed">
+      <div class="section-header">
+        <span class="section-header__subtitle">Follow Us</span>
+        <h2 class="section-header__title">@OpulenceAndHeirloom</h2>
+      </div>
+
+      <div class="instagram-grid">
+        <div class="instagram-item reveal-stagger-1">
+          <img src="./assets/ladies_western.webp" alt="Instagram image showing minimal sage green designer outfit" loading="lazy">
+          <div class="instagram-item__overlay">
+            <span>View Post</span>
+          </div>
+        </div>
+        <div class="instagram-item reveal-stagger-2">
+          <img src="./assets/kids_fashion.webp" alt="Instagram image showing girl in cream linen occasion dress" loading="lazy">
+          <div class="instagram-item__overlay">
+            <span>View Post</span>
+          </div>
+        </div>
+        <div class="instagram-item reveal-stagger-3">
+          <img src="./assets/lookbook_1.webp" alt="Instagram image showing detail linen hand-stitching" loading="lazy">
+          <div class="instagram-item__overlay">
+            <span>View Post</span>
+          </div>
+        </div>
+        <div class="instagram-item reveal-stagger-1">
+          <img src="./assets/resort_wear.webp" alt="Instagram image showing flowy cream silk-linen movement" loading="lazy">
+          <div class="instagram-item__overlay">
+            <span>View Post</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Map Section -->
+    <section class="section" id="visit" aria-label="Contact Information and Address">
+      <div class="contact-grid">
+        <div class="contact-info-container reveal-up">
+          <span class="section-header__subtitle">Get in Touch</span>
+          <h2 class="about-info__serif" style="margin-bottom: 3rem;">Visit Our Sanctuary</h2>
+          
+          <div class="contact-info-list" aria-label="Sanctuary Locations and Phone number">
+            <address class="contact-item">
+              <p class="contact-item__title">Boutique Address</p>
+              <p class="contact-item__detail">Shop Number A233,<br>Town Square 2, Sector 82,<br>Gurugram, Haryana - 122012</p>
+            </address>
+
+            <div class="contact-item">
+              <p class="contact-item__title">Connect Directly</p>
+              <p class="contact-item__detail"><a href="tel:+919971809626" class="contact-link">+91 99718 09626</a></p>
+              <p class="contact-item__detail"><a href="tel:+919212788629" class="contact-link">+91 92127 88629</a></p>
+              <p class="contact-item__detail"><a href="tel:+919999788629" class="contact-link">+91 99997 88629</a></p>
+              <p class="contact-item__detail"><a href="mailto:care@opulenceandheirloom.com" class="contact-link">care@opulenceandheirloom.com</a></p>
+            </div>
+          </div>
+
+          <div class="contact-actions">
+            <a href="https://wa.me/919971809626" class="btn-contact-action btn-contact-action--whatsapp" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.96 9.96 0 001.333 4.982L2 22l5.18-1.359a9.95 9.95 0 004.828 1.256h.004c5.507 0 9.99-4.478 9.99-9.984A9.998 9.998 0 0012.012 2zm5.727 14.153c-.237.667-1.378 1.285-1.939 1.348-.521.057-1.199.083-1.928-.152-.451-.144-1.011-.334-1.745-.65-3.125-1.349-5.147-4.529-5.304-4.739-.157-.21-1.252-1.667-1.252-3.178 0-1.51.787-2.253 1.066-2.556.28-.303.608-.378.81-.378.204 0 .408.002.585.01.185.008.436-.07.683.528.254.614.869 2.122.945 2.274.076.152.127.329.025.53-.1.203-.153.329-.304.506-.153.178-.32.397-.457.531-.153.149-.313.313-.135.617.177.303.789 1.3 1.691 2.106.903.805 1.666 1.054 1.97 1.179.303.127.48.102.658-.102.178-.203.762-.886.965-1.19.203-.303.407-.253.686-.152.28.101 1.777.836 2.081.988.304.152.507.228.583.354.076.126.076.734-.16 1.401z"/></svg>
+              WhatsApp Us
+            </a>
+            <a href="https://instagram.com" class="btn-contact-action btn-contact-action--instagram" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+              Instagram
+            </a>
+            <a href="tel:+919971809626" class="btn-contact-action btn-contact-action--call">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Call Boutique
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-map-wrapper reveal-up">
+          <iframe 
+            class="map-iframe" 
+            src="https://maps.google.com/maps?q=Town%20Square%202,%20Sector%2082,%20Gurugram,%20Haryana%20122012&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade" 
+            title="Opulence &amp; Heirloom Boutique Gurugram Location Map">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Col 1 -->
+      <div class="footer-col">
+        <h3 class="footer-col__title" style="font-family: var(--font-logo); font-size: 1.2rem; color: var(--text-primary); letter-spacing: 0.1em; margin-bottom: 1.5rem; font-weight: 400; text-transform: uppercase;">Opulence & Heirloom</h3>
+        <p class="newsletter-desc">An ultra-premium ladies and kids fashion boutique dedicated to craftsmanship, organic fibers, and modern minimal aesthetics.</p>
+      </div>
+
+      <!-- Col 2 -->
+      <div class="footer-col">
+        <h4 class="footer-col__title">The Brand</h4>
+        <ul class="footer-links">
+          <li><a href="#story" class="footer-link">Our Story</a></li>
+          <li><a href="#featured-editorial" class="footer-link">Editorial Campaigns</a></li>
+          <li><a href="#why-us" class="footer-link">Core Values</a></li>
+          <li><a href="#experience" class="footer-link">Virtual Boutique</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3 -->
+      <div class="footer-col">
+        <h4 class="footer-col__title">Collections</h4>
+        <ul class="footer-links">
+          <li><a href="#collection" class="footer-link">Ladies Western</a></li>
+          <li><a href="#collection" class="footer-link">Ladies Ethnic</a></li>
+          <li><a href="#collection" class="footer-link">Kids Festive</a></li>
+          <li><a href="#collection" class="footer-link">Bespoke Fittings</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4 -->
+      <div class="footer-col">
+        <h4 class="footer-col__title">Newsletter</h4>
+        <p class="newsletter-desc">Subscribe to receive seasonal lookbooks, campaign releases, and private showroom invitations.</p>
+        <form class="newsletter-form" action="#" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Opulence & Heirloom.');" aria-label="Newsletter Subscription Form">
+          <input class="newsletter-input" type="email" placeholder="Your Email Address" required aria-required="true" aria-label="Email address field">
+          <button class="newsletter-submit" type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copyright">&copy; 2026 Opulence & Heirloom Boutique. All Rights Reserved.</p>
+      <p class="footer-credits">Refined Scandinavian & Parisian Luxury</p>
+    </div>
+  </footer>
+
+  <!-- Tag-style Dynamic Detail Drawer -->
+  <div class="tag-drawer" id="lookbook-drawer" aria-hidden="true" role="dialog" aria-label="Garment detail panel">
+    <div class="tag-drawer__overlay"></div>
+    <div class="tag-drawer__content">
+      <button class="btn-drawer-close" aria-label="Close details panel">&times;</button>
+      
+      <div class="garment-tag">
+        <div class="garment-tag__stitch-line">
+          <div class="garment-tag__brand">O&amp;H</div>
+          <div class="garment-tag__num-tag">Item No. <span id="tag-num">01</span></div>
+          
+          <div class="garment-tag__divider"></div>
+          
+          <div class="garment-tag__image-container">
+            <img id="tag-image" src="" alt="Garment detail look">
+          </div>
+          
+          <h3 class="garment-tag__title" id="tag-title">Ethnic Modernity</h3>
+          
+          <div class="garment-tag__spec">
+            <h4 class="garment-tag__label">Fabric Specification</h4>
+            <p class="garment-tag__text" id="tag-fabric">Loading fabric details...</p>
+          </div>
+          
+          <div class="garment-tag__spec">
+            <h4 class="garment-tag__label">Design Features</h4>
+            <p class="garment-tag__text" id="tag-design">Loading design features...</p>
+          </div>
+          
+          <div class="garment-tag__divider"></div>
+          
+          <a href="#visit" class="garment-tag__btn btn-drawer-contact" id="btn-tag-inquire">Inquire About Fit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript File link -->
+  <script type="module" src="./main.js"></script>
+
+</body>
+</html>
