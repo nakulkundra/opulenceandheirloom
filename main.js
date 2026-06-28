@@ -256,6 +256,23 @@ const initTagDrawer = () => {
     });
   }
 
+  // Hover-Zoom fabric magnification effect inside the garment tag
+  const tagImageContainer = drawer ? drawer.querySelector('.garment-tag__image-container') : null;
+  if (tagImageContainer && tagImage) {
+    tagImageContainer.addEventListener('mousemove', (e) => {
+      const rect = tagImageContainer.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+      tagImage.style.transformOrigin = `${x}% ${y}%`;
+      tagImage.style.transform = 'scale(2.2)';
+    });
+
+    tagImageContainer.addEventListener('mouseleave', () => {
+      tagImage.style.transform = 'scale(1)';
+      tagImage.style.transformOrigin = 'center center';
+    });
+  }
+
   // ESC key support
   window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && drawer.classList.contains('tag-drawer--active')) {
@@ -338,53 +355,6 @@ const injectFallbackCSS = () => {
 };
 
 
-// --- Lounge & Casuals Carousel Slider ---
-const initLoungeCarousel = () => {
-  const slider = document.getElementById('lounge-slider');
-  const prevBtn = document.getElementById('lounge-prev');
-  const nextBtn = document.getElementById('lounge-next');
-
-  if (!slider || !prevBtn || !nextBtn) return;
-
-  const slideWidth = 375; // Card width + gap
-  
-  prevBtn.addEventListener('click', () => {
-    slider.scrollBy({ left: -slideWidth, behavior: 'smooth' });
-  });
-
-  nextBtn.addEventListener('click', () => {
-    slider.scrollBy({ left: slideWidth, behavior: 'smooth' });
-  });
-
-  // Mouse Drag-to-Scroll support
-  let isDown = false;
-  let startX;
-  let scrollLeft;
-
-  slider.addEventListener('mousedown', (e) => {
-    isDown = true;
-    startX = e.pageX - slider.offsetLeft;
-    scrollLeft = slider.scrollLeft;
-  });
-
-  slider.addEventListener('mouseleave', () => {
-    isDown = false;
-  });
-
-  slider.addEventListener('mouseup', () => {
-    isDown = false;
-  });
-
-  slider.addEventListener('mousemove', (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - slider.offsetLeft;
-    const walk = (x - startX) * 1.5;
-    slider.scrollLeft = scrollLeft - walk;
-  });
-};
-
-
 // --- Initialization ---
 document.addEventListener('DOMContentLoaded', () => {
   injectFallbackCSS();
@@ -395,5 +365,4 @@ document.addEventListener('DOMContentLoaded', () => {
   initWalkthrough();
   initTagDrawer();
   initScrollFallback();
-  initLoungeCarousel();
 });

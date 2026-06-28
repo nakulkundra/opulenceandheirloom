@@ -1463,12 +1463,15 @@
     margin-bottom: 2rem;
     border: 1px solid rgba(106, 98, 88, 0.15);
     background-color: var(--natural-linen);
+    cursor: zoom-in;
   }
 
   .garment-tag__image-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.15s var(--ease-editorial);
+    transform-origin: center center;
   }
 
   .garment-tag__title {
@@ -1524,140 +1527,6 @@
     background-color: var(--text-primary);
     color: var(--natural-linen);
     border-color: var(--text-primary);
-  }
-
-  /* --- Lounge & Casuals Carousel Section --- */
-  .lounge-carousel-wrapper {
-    position: relative;
-    width: 100%;
-    margin-top: 2rem;
-  }
-
-  .lounge-carousel {
-    display: flex;
-    gap: 2.5rem;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none; /* Hide scrollbar Firefox */
-    padding: 2rem 0;
-    scroll-behavior: smooth;
-    user-select: none;
-    cursor: grab;
-  }
-
-  .lounge-carousel::-webkit-scrollbar {
-    display: none; /* Hide scrollbar Chrome/Safari */
-  }
-
-  .lounge-carousel:active {
-    cursor: grabbing;
-  }
-
-  .lounge-card {
-    flex: 0 0 350px;
-    scroll-snap-align: start;
-    display: flex;
-    flex-direction: column;
-    outline: none;
-    transition: var(--transition-medium);
-  }
-
-  .lounge-card__image-box {
-    position: relative;
-    aspect-ratio: 3 / 4;
-    overflow: hidden;
-    background-color: var(--natural-linen);
-    margin-bottom: 1.5rem;
-  }
-
-  .lounge-card__image-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: var(--transition-slow);
-    filter: brightness(0.98);
-  }
-
-  .lounge-card:hover .lounge-card__image-box img,
-  .lounge-card:focus .lounge-card__image-box img {
-    transform: scale(1.03);
-  }
-
-  .lounge-card__info {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    padding-left: 3rem;
-  }
-
-  .lounge-card__num {
-    position: absolute;
-    left: 0;
-    top: 0.25rem;
-    font-size: 0.8rem;
-    font-family: var(--font-sans);
-    color: var(--accent-line);
-    font-weight: 500;
-  }
-
-  .lounge-card__title {
-    font-family: var(--font-serif);
-    font-size: 1.5rem;
-    color: var(--text-primary);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    font-weight: 300;
-    margin-bottom: 0.5rem;
-    line-height: 1.2;
-    transition: var(--transition-medium);
-  }
-
-  .lounge-card:hover .lounge-card__title,
-  .lounge-card:focus .lounge-card__title {
-    color: var(--warm-wood);
-  }
-
-  .lounge-card__desc {
-    font-size: 0.85rem;
-    color: var(--text-secondary);
-    line-height: 1.4;
-  }
-
-  /* Carousel navigation buttons */
-  .carousel-nav {
-    display: flex;
-    justify-content: flex-end;
-    gap: 1.5rem;
-    margin-top: 3rem;
-    padding-right: 1rem;
-  }
-
-  .btn-carousel {
-    width: 50px;
-    height: 50px;
-    border: 1px solid rgba(106, 98, 88, 0.3);
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: var(--transition-medium);
-    background-color: transparent;
-    color: var(--text-primary);
-  }
-
-  .btn-carousel:hover {
-    background-color: var(--text-primary);
-    border-color: var(--text-primary);
-    color: var(--natural-linen);
-  }
-
-  .btn-carousel svg {
-    width: 18px;
-    height: 18px;
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 1.5;
   }
 }
 
@@ -1924,13 +1793,7 @@
     margin-bottom: 0.5rem;
   }
 
-  .lounge-card {
-    flex: 0 0 280px;
-  }
 
-  .lounge-carousel {
-    gap: 1.5rem;
-  }
 
   .tag-drawer__content {
     max-width: 100%;
