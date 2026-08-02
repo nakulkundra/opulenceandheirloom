@@ -130,7 +130,7 @@ html, body {
 /* --- Hero Overlay Content --- */
 .hero-overlay-content {
   position: absolute;
-  top: 3%;
+  top: 3.5%;
   left: 24%;
   transform: translateX(-50%);
   display: flex;
@@ -140,7 +140,7 @@ html, body {
   z-index: 10;
   text-align: center;
   width: 90%;
-  max-width: 520px;
+  max-width: 500px;
 }
 
 .coming-soon-badge {
@@ -150,17 +150,18 @@ html, body {
   text-transform: uppercase;
   letter-spacing: 0.28em;
   color: var(--text-primary);
-  background: rgba(236, 228, 216, 0.8);
+  background: rgba(236, 228, 216, 0.82);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   padding: 0.5rem 1.5rem;
   border-radius: 50px;
   border: 1px solid rgba(166, 141, 114, 0.4);
   box-shadow: 0 4px 20px rgba(45, 37, 31, 0.05);
+  white-space: nowrap;
 }
 
 .store-location-box {
-  background: rgba(236, 228, 216, 0.86);
+  background: rgba(236, 228, 216, 0.88);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(166, 141, 114, 0.4);
@@ -171,6 +172,7 @@ html, body {
   flex-direction: column;
   align-items: center;
   gap: 0.3rem;
+  width: 100%;
 }
 
 .location-heading {
@@ -214,6 +216,7 @@ html, body {
   justify-content: center;
   gap: 0.5rem;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .contact-label {
@@ -257,4 +260,162 @@ html, body {
     opacity: 1;
   }
 }
+
+/* --- Responsive Media Queries --- */
+
+/* Tablets & Laptops (max-width: 991px) */
+@media screen and (max-width: 991px) {
+  html, body {
+    height: auto;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .coming-soon-container {
+    padding: 1.2rem 1rem 0.5rem 1rem;
+    max-width: 95%;
+  }
+
+  .brand-title {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    letter-spacing: 0.15em;
+  }
+
+  .brand-subheading {
+    font-size: clamp(0.6rem, 2vw, 0.75rem);
+    letter-spacing: 0.25em;
+    margin-top: 0.6rem;
+  }
+
+  .hero-image-wrapper {
+    min-height: 540px;
+    margin-top: 0.5rem;
+    width: 100%;
+  }
+
+  .hero-full-width-img {
+    object-position: center 30%;
+  }
+
+  .hero-overlay-content {
+    left: 50%;
+    top: 1.5rem;
+    transform: translateX(-50%);
+    width: calc(100% - 2rem);
+    max-width: 440px;
+    gap: 0.65rem;
+  }
+}
+
+/* Mobile Devices (max-width: 600px) */
+@media screen and (max-width: 600px) {
+  .coming-soon-container {
+    padding: 1rem 0.8rem 0.4rem 0.8rem;
+  }
+
+  .brand-title {
+    font-size: clamp(1.4rem, 6.5vw, 2.1rem);
+    letter-spacing: 0.12em;
+  }
+
+  .brand-subheading {
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+  }
+
+  .motif-divider svg {
+    max-width: 150px;
+    height: auto;
+  }
+
+  .hero-image-wrapper {
+    min-height: 520px;
+    padding-bottom: 2rem;
+  }
+
+  .hero-full-width-img {
+    object-position: 70% 30%;
+  }
+
+  .hero-overlay-content {
+    left: 50%;
+    top: 1rem;
+    transform: translateX(-50%);
+    width: calc(100% - 1.5rem);
+    max-width: 100%;
+    gap: 0.6rem;
+  }
+
+  .coming-soon-badge {
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    padding: 0.45rem 1rem;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .store-location-box {
+    padding: 0.85rem 0.9rem;
+    border-radius: 10px;
+  }
+
+  .location-heading {
+    font-size: 0.58rem;
+    letter-spacing: 0.2em;
+  }
+
+  .location-address {
+    font-size: 0.82rem;
+    line-height: 1.35;
+    text-align: center;
+  }
+
+  .contact-link {
+    font-size: 0.78rem;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .contact-label {
+    font-size: 0.58rem;
+  }
+
+  .phone-numbers {
+    gap: 0.3rem;
+  }
+
+  .dot-separator {
+    font-size: 0.6rem;
+  }
+}
+
+/* Very Small Mobile Screens (max-width: 380px) */
+@media screen and (max-width: 380px) {
+  .brand-title {
+    font-size: 1.3rem;
+    letter-spacing: 0.1em;
+  }
+
+  .hero-overlay-content {
+    width: calc(100% - 1rem);
+  }
+
+  .store-location-box {
+    padding: 0.75rem 0.75rem;
+  }
+
+  .phone-numbers {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .dot-separator {
+    display: none;
+  }
+}
+
 
