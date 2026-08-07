@@ -506,13 +506,13 @@ const initQRModal = () => {
     if (type === 'call') {
       modalTitle.textContent = 'Scan to Call Store';
       modalSubtitle.textContent = 'Point your smartphone camera to dial +91 9971809626';
-      modalImg.src = './assets/qr_call.svg';
+      modalImg.src = './assets/qr_call.png';
       modalActionBtn.href = 'tel:+919971809626';
       modalActionBtn.textContent = 'Call +91 9971809626';
     } else if (type === 'location') {
       modalTitle.textContent = 'Store Directions';
       modalSubtitle.textContent = 'Scan with camera to open Google Maps for directions';
-      modalImg.src = './assets/qr_location.svg';
+      modalImg.src = './assets/qr_location.png';
       modalActionBtn.href = 'https://maps.app.goo.gl/rjAxaMCtCSekF4YL9';
       modalActionBtn.textContent = 'Open Google Maps';
     }
