@@ -23,8 +23,16 @@
 </head>
 
 <body>
+  <!-- Full Screen Background Video -->
+  <div class="hero-video-bg">
+    <video class="hero-full-width-img" autoplay loop muted playsinline webkit-playsinline poster="./assets/hero_lounge_deck.png">
+      <source src="./assets/backdrop.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- Top Floating Header in Liquid Glass -->
   <div class="coming-soon-container">
-    <h1 class="brand-title">Opulence & Heirloom</h1>
+    <h1 class="brand-title">Opulence &amp; Heirloom</h1>
     <p class="brand-subheading">A Boutique for Every Generation</p>
     <div class="motif-divider">
       <svg width="200" height="24" viewBox="0 0 200 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -43,32 +51,92 @@
     </div>
   </div>
 
-  <div class="hero-image-wrapper">
-    <video class="hero-full-width-img" autoplay loop muted playsinline poster="./assets/hero_lounge_deck.png">
-      <source src="./assets/backdrop.mp4" type="video/mp4">
-    </video>
-    <div class="hero-overlay-content">
-      <div class="coming-soon-badge">Online Boutique Opening Soon</div>
-      <div class="store-location-box">
-        <span class="location-heading">For Physical Store Visit</span>
-        <address class="location-address">A1-233, Vatika Town Square 2, Sec 82, Gurgaon</address>
-        <div class="location-divider"></div>
-        <div class="contact-details">
-          <div class="contact-item">
-            <span class="contact-label">Email</span>
-            <a href="mailto:care@opulenceandheirloom.com" class="contact-link">care@opulenceandheirloom.com</a>
+  <!-- Floating Liquid Glass Content Overlay -->
+  <div class="hero-overlay-content">
+    <div class="coming-soon-badge">Online Boutique Opening Soon</div>
+    <div class="store-location-box">
+      <span class="location-heading">For Physical Store Visit</span>
+      <address class="location-address">A1-233, Vatika Town Square 2, Sec 82, Gurgaon</address>
+      <div class="location-divider"></div>
+      <div class="contact-details">
+        <div class="contact-item">
+          <span class="contact-label">Email</span>
+          <a href="mailto:care@opulenceandheirloom.com" class="contact-link">care@opulenceandheirloom.com</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">Phone</span>
+          <div class="phone-numbers">
+            <a href="tel:01243180273" class="contact-link">01243180273</a>
+            <span class="dot-separator">•</span>
+            <a href="tel:9971809626" class="contact-link">9971809626</a>
+            <span class="dot-separator">•</span>
+            <a href="tel:9212788629" class="contact-link">9212788629</a>
           </div>
-          <div class="contact-item">
-            <span class="contact-label">Phone</span>
-            <div class="phone-numbers">
-              <a href="tel:01243180273" class="contact-link">01243180273</a>
-              <span class="dot-separator">•</span>
-              <a href="tel:9971809626" class="contact-link">9971809626</a>
-              <span class="dot-separator">•</span>
-              <a href="tel:9212788629" class="contact-link">9212788629</a>
+        </div>
+      </div>
+
+      <div class="location-divider"></div>
+
+      <!-- Quick Scan QR Codes Section -->
+      <div class="qr-codes-section">
+        <span class="qr-section-title">Scan to Connect</span>
+        <div class="qr-codes-grid">
+          <!-- Call QR Card -->
+          <div class="qr-card" id="qr-card-call" data-qr-type="call">
+            <div class="qr-image-wrapper">
+              <img src="./assets/qr_call.svg" alt="Scan QR code to call Opulence & Heirloom store" class="qr-code-img">
+              <span class="qr-icon-badge" title="Call Store">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                </svg>
+              </span>
+            </div>
+            <div class="qr-card-info">
+              <span class="qr-card-label">Scan to Call</span>
+              <a href="tel:+919971809626" class="qr-action-btn">
+                <span>Call Direct</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Location QR Card -->
+          <div class="qr-card" id="qr-card-location" data-qr-type="location">
+            <div class="qr-image-wrapper">
+              <img src="./assets/qr_location.svg" alt="Scan QR code for store directions on Google Maps" class="qr-code-img">
+              <span class="qr-icon-badge" title="Store Location">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+              </span>
+            </div>
+            <div class="qr-card-info">
+              <span class="qr-card-label">Get Directions</span>
+              <a href="https://maps.app.goo.gl/rjAxaMCtCSekF4YL9" target="_blank" rel="noopener noreferrer" class="qr-action-btn">
+                <span>Google Maps</span>
+              </a>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- QR Code Enlarge Modal -->
+  <div class="qr-modal" id="qrModal" aria-hidden="true">
+    <div class="qr-modal-backdrop"></div>
+    <div class="qr-modal-card">
+      <button class="qr-modal-close" id="qrModalClose" aria-label="Close modal">&times;</button>
+      <div class="qr-modal-header">
+        <h3 class="qr-modal-title" id="qrModalTitle">Scan QR Code</h3>
+        <p class="qr-modal-subtitle" id="qrModalSubtitle">Point your smartphone camera to scan</p>
+      </div>
+      <div class="qr-modal-body">
+        <div class="qr-modal-frame">
+          <img id="qrModalImg" src="" alt="Enlarged QR Code" class="qr-modal-img">
+        </div>
+      </div>
+      <div class="qr-modal-footer">
+        <a id="qrModalActionBtn" href="#" target="_blank" class="qr-modal-btn">Action</a>
       </div>
     </div>
   </div>

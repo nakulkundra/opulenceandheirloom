@@ -488,6 +488,67 @@ const injectFallbackCSS = () => {
 };
 
 
+// --- QR Code Zoom Modal ---
+const initQRModal = () => {
+  const modal = document.getElementById('qrModal');
+  if (!modal) return;
+
+  const modalTitle = document.getElementById('qrModalTitle');
+  const modalSubtitle = document.getElementById('qrModalSubtitle');
+  const modalImg = document.getElementById('qrModalImg');
+  const modalActionBtn = document.getElementById('qrModalActionBtn');
+  const closeBtn = document.getElementById('qrModalClose');
+  const backdrop = modal.querySelector('.qr-modal-backdrop');
+
+  const qrCards = document.querySelectorAll('.qr-card');
+
+  const openModal = (type) => {
+    if (type === 'call') {
+      modalTitle.textContent = 'Scan to Call Store';
+      modalSubtitle.textContent = 'Point your smartphone camera to dial +91 9971809626';
+      modalImg.src = './assets/qr_call.svg';
+      modalActionBtn.href = 'tel:+919971809626';
+      modalActionBtn.textContent = 'Call +91 9971809626';
+    } else if (type === 'location') {
+      modalTitle.textContent = 'Store Directions';
+      modalSubtitle.textContent = 'Scan with camera to open Google Maps for directions';
+      modalImg.src = './assets/qr_location.svg';
+      modalActionBtn.href = 'https://maps.app.goo.gl/rjAxaMCtCSekF4YL9';
+      modalActionBtn.textContent = 'Open Google Maps';
+    }
+
+    modal.classList.add('qr-modal--active');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeModal = () => {
+    modal.classList.remove('qr-modal--active');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  };
+
+  qrCards.forEach(card => {
+    card.addEventListener('click', (e) => {
+      // If user clicked directly on the action button inside the card, let default link navigate
+      if (e.target.closest('.qr-action-btn')) return;
+      
+      const type = card.getAttribute('data-qr-type');
+      openModal(type);
+    });
+  });
+
+  if (closeBtn) closeBtn.addEventListener('click', closeModal);
+  if (backdrop) backdrop.addEventListener('click', closeModal);
+
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('qr-modal--active')) {
+      closeModal();
+    }
+  });
+};
+
+
 // --- Initialization ---
 document.addEventListener('DOMContentLoaded', () => {
   injectFallbackCSS();
@@ -498,4 +559,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initWalkthrough();
   initScrollFallback();
   initLookbookExplorer();
+  initQRModal();
 });
+
