@@ -30,8 +30,23 @@
     </video>
   </div>
 
+  <!-- Ambient Background Audio -->
+  <audio id="bg-audio" loop preload="auto">
+    <source src="./assets/ambient_lounge.mp3" type="audio/mpeg">
+  </audio>
+
   <!-- Top Floating Header in Liquid Glass -->
   <div class="coming-soon-container">
+    <!-- Sound Control Toggle -->
+    <button class="sound-toggle-btn" id="soundToggle" aria-label="Toggle background music" title="Toggle Boutique Ambience">
+      <span class="sound-wave-icon" id="soundIcon">
+        <span class="bar bar-1"></span>
+        <span class="bar bar-2"></span>
+        <span class="bar bar-3"></span>
+      </span>
+      <span class="sound-toggle-label" id="soundLabel">Sound Off</span>
+    </button>
+
     <h1 class="brand-title">Opulence &amp; Heirloom</h1>
     <p class="brand-subheading">A Boutique for Every Generation</p>
     <div class="motif-divider">

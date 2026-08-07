@@ -549,6 +549,76 @@ const initQRModal = () => {
 };
 
 
+// --- Ambient Audio Management ---
+const initAmbientAudio = () => {
+  const audio = document.getElementById('bg-audio');
+  const toggleBtn = document.getElementById('soundToggle');
+  const soundLabel = document.getElementById('soundLabel');
+  
+  if (!audio || !toggleBtn) return;
+
+  // Set warm soft volume level (35%)
+  audio.volume = 0.35;
+
+  let isPlaying = false;
+
+  const updateUI = (active) => {
+    isPlaying = active;
+    if (active) {
+      toggleBtn.classList.add('sound-toggle-btn--playing');
+      if (soundLabel) soundLabel.textContent = 'Sound On';
+    } else {
+      toggleBtn.classList.remove('sound-toggle-btn--playing');
+      if (soundLabel) soundLabel.textContent = 'Sound Off';
+    }
+  };
+
+  const playAudio = () => {
+    audio.play().then(() => {
+      updateUI(true);
+    }).catch(() => {
+      // Autoplay policy prevented immediate playback until user interaction
+      updateUI(false);
+    });
+  };
+
+  const pauseAudio = () => {
+    audio.pause();
+    updateUI(false);
+  };
+
+  const toggleSound = () => {
+    if (isPlaying) {
+      pauseAudio();
+    } else {
+      playAudio();
+    }
+  };
+
+  toggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleSound();
+  });
+
+  // Attempt initial playback on load
+  playAudio();
+
+  // User Interaction Trigger (Unlocks audio on first tap/click/scroll if blocked by browser policy)
+  const unlockAudio = () => {
+    if (!isPlaying) {
+      playAudio();
+    }
+    ['click', 'touchstart', 'keydown', 'scroll'].forEach(evt => {
+      window.removeEventListener(evt, unlockAudio, { passive: true });
+    });
+  };
+
+  ['click', 'touchstart', 'keydown', 'scroll'].forEach(evt => {
+    window.addEventListener(evt, unlockAudio, { passive: true, once: true });
+  });
+};
+
+
 // --- Initialization ---
 document.addEventListener('DOMContentLoaded', () => {
   injectFallbackCSS();
@@ -560,5 +630,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollFallback();
   initLookbookExplorer();
   initQRModal();
+  initAmbientAudio();
 });
+
 
