@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "jsqr": "^1.4.0",
+    "pngjs": "^7.0.0",
     "vite": "^5.2.0"
   },
   "dependencies": {
