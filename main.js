@@ -559,8 +559,10 @@ const initAmbientAudio = () => {
 
   // Set warm soft volume level (35%)
   audio.volume = 0.35;
+  audio.autoplay = true;
 
-  let isPlaying = false;
+  let isPlaying = true;
+  let userExplicitlyTurnedOff = false;
 
   const updateUI = (active) => {
     isPlaying = active;
@@ -574,23 +576,26 @@ const initAmbientAudio = () => {
   };
 
   const playAudio = () => {
+    if (userExplicitlyTurnedOff) return;
     audio.play().then(() => {
       updateUI(true);
     }).catch(() => {
-      // Autoplay policy prevented immediate playback until user interaction
-      updateUI(false);
+      // Browser autoplay policy blocked unmuted sound until interaction
+      // Keep state as ready so user's first interaction instantly plays audio
     });
   };
 
   const pauseAudio = () => {
+    userExplicitlyTurnedOff = true;
     audio.pause();
     updateUI(false);
   };
 
   const toggleSound = () => {
-    if (isPlaying) {
+    if (isPlaying && !audio.paused) {
       pauseAudio();
     } else {
+      userExplicitlyTurnedOff = false;
       playAudio();
     }
   };
@@ -600,21 +605,18 @@ const initAmbientAudio = () => {
     toggleSound();
   });
 
-  // Attempt initial playback on load
+  // Attempt initial playback immediately on load
   playAudio();
 
-  // User Interaction Trigger (Unlocks audio on first tap/click/scroll if blocked by browser policy)
-  const unlockAudio = () => {
-    if (!isPlaying) {
+  // Auto-play / Unmute on user's first interaction anywhere on screen
+  const autoPlayOnInteraction = () => {
+    if (!userExplicitlyTurnedOff && audio.paused) {
       playAudio();
     }
-    ['click', 'touchstart', 'keydown', 'scroll'].forEach(evt => {
-      window.removeEventListener(evt, unlockAudio, { passive: true });
-    });
   };
 
-  ['click', 'touchstart', 'keydown', 'scroll'].forEach(evt => {
-    window.addEventListener(evt, unlockAudio, { passive: true, once: true });
+  ['click', 'touchstart', 'pointerdown', 'keydown', 'scroll', 'mousemove'].forEach(evt => {
+    window.addEventListener(evt, autoPlayOnInteraction, { passive: true, once: true });
   });
 };
 
