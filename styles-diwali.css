@@ -1,0 +1,173 @@
+/* ==========================================================================
+   OPULENCE & HEIRLOOM — Seasonal Diwali Festive Layer (Temporary)
+   To disable: Remove this stylesheet and diwali.js, or run: git checkout baseline-default
+   ========================================================================== */
+
+/* Full-Screen Floating Golden Canvas */
+#diwaliCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9980;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+body.diwali-off #diwaliCanvas {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Festive Announcement Bar */
+.announcement-bar.is-diwali {
+  background: linear-gradient(90deg, #14120f 0%, #261c10 50%, #14120f 100%);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.45);
+  color: #faebd7;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.announcement-bar.is-diwali::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -80%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 223, 128, 0.16), transparent);
+  animation: diwali-banner-shimmer 7s infinite ease-in-out;
+  pointer-events: none;
+}
+
+@keyframes diwali-banner-shimmer {
+  0% { left: -80%; }
+  35% { left: 160%; }
+  100% { left: 160%; }
+}
+
+.diwali-pill {
+  background: linear-gradient(135deg, #c59b27 0%, #e0b84c 50%, #b8861b 100%) !important;
+  color: #12100d !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.14em !important;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.45);
+}
+
+.diwali-diya-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+
+.diwali-svg-diya {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  vertical-align: middle;
+  filter: drop-shadow(0 0 5px rgba(255, 170, 0, 0.8));
+}
+
+.diwali-flame-path {
+  transform-origin: 50% 90%;
+  animation: diya-flame-motion 1.8s infinite alternate ease-in-out;
+}
+
+@keyframes diya-flame-motion {
+  0% {
+    transform: scale(1) rotate(-1.5deg);
+    opacity: 0.95;
+  }
+  30% {
+    transform: scale(1.14, 0.92) rotate(2deg);
+    opacity: 1;
+  }
+  60% {
+    transform: scale(0.92, 1.1) rotate(-2deg);
+    opacity: 0.88;
+  }
+  100% {
+    transform: scale(1.05) rotate(0.5deg);
+    opacity: 1;
+  }
+}
+
+/* Discreet Seasonal Floating Switch */
+.diwali-toggle-dock {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  z-index: 9995;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(18, 16, 13, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 0 0 12px rgba(212, 175, 55, 0.2);
+  transition: all 0.3s ease;
+}
+
+.diwali-toggle-dock:hover {
+  border-color: rgba(212, 175, 55, 0.7);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35), 0 0 18px rgba(212, 175, 55, 0.35);
+}
+
+.diwali-toggle-btn {
+  background: none;
+  border: none;
+  color: #faebd7;
+  font-family: var(--font-body, inherit);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0;
+  margin: 0;
+}
+
+.diwali-toggle-indicator {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #e0b84c;
+  box-shadow: 0 0 6px #e0b84c;
+  transition: all 0.3s ease;
+}
+
+body.diwali-off .diwali-toggle-indicator {
+  background: #666;
+  box-shadow: none;
+}
+
+/* Subtle Golden Glow on CTA Buttons during Diwali */
+body:not(.diwali-off) .btn--primary {
+  box-shadow: 0 4px 18px rgba(212, 175, 55, 0.25);
+}
+
+body:not(.diwali-off) .btn--primary:hover {
+  box-shadow: 0 6px 26px rgba(212, 175, 55, 0.45);
+}
+
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  #diwaliCanvas {
+    display: none !important;
+  }
+  .diwali-flame-path,
+  .announcement-bar.is-diwali::before {
+    animation: none !important;
+  }
+}
