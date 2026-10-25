@@ -1,4 +1,4 @@
-// --- Custom Luxury Cursor ---
+// --- Custom Cursor ---
 const initCustomCursor = () => {
   const cursor = document.querySelector('.custom-cursor');
   const ring = document.querySelector('.custom-cursor-ring');
@@ -213,14 +213,14 @@ const initLookbookExplorer = () => {
     ],
     ethnic: [
       { num: '01', title: 'Ethnic Modernity', fabric: 'Hand-woven Organic Linen-Silk blend, dyed with natural pigments, 180 GSM', design: 'Contemporary draped ethnic silhouette, asymmetric layered hemline, side inseam pockets', img: './assets/lookbook_ethnic.webp' },
-      { num: '08', title: 'Heritage Thread', fabric: 'Fine hand-loom luxury linen saree, spun with hand-twisted metallic silver zari threads, 110 GSM', design: 'Traditional contemporary Indian drape, custom fringe border, modern clean pleating', img: './assets/lookbook_08.webp' },
-      { num: '12', title: 'Ethereal Drapes', fabric: 'Sheer luxury organza-linen blend, translucent weave, raw silk accents, 90 GSM', design: 'Fluid wrap dupatta scarf, hand-rolled hems, minimalist fine stitch border', img: './assets/lookbook_12.webp' },
+      { num: '08', title: 'Heritage Thread', fabric: 'Fine hand-loom artisan linen saree, spun with hand-twisted metallic silver zari threads, 110 GSM', design: 'Traditional contemporary Indian drape, custom fringe border, modern clean pleating', img: './assets/lookbook_08.webp' },
+      { num: '12', title: 'Ethereal Drapes', fabric: 'Sheer organza-linen blend, translucent weave, raw silk accents, 90 GSM', design: 'Fluid wrap dupatta scarf, hand-rolled hems, minimalist fine stitch border', img: './assets/lookbook_12.webp' },
       { num: '14', title: 'Royal Zari Saree', fabric: 'Vibrant hand-woven Banarasi silk with pure gold zari borders, 220 GSM', design: 'Pre-stitched pleats for effortless wear, featuring a sleek high bun and crimson lip styling', img: './assets/saree_01.webp' },
       { num: '15', title: 'Emerald Elegance Saree', fabric: 'Premium georgette with intricate gold hand-embroidery, 160 GSM', design: 'Stitched silhouette, elegant soft waves hairstyle, and nude-pink lip styling', img: './assets/saree_02.webp' },
       { num: '16', title: 'Mustard Blossom Saree', fabric: 'Fine hand-loom cotton-silk blend, lightweight and breathable, 140 GSM', design: 'Traditional pre-stitched drape, paired with a flower-adorned braid and ruby red lips', img: './assets/saree_03.webp' },
       { num: '17', title: 'Magenta Organza Saree', fabric: 'Delicate sheer organza with scalloped silver embroidery, 110 GSM', design: 'Pre-stitched drape, styled with a modern messy bun and coral lips', img: './assets/saree_04.webp' },
       { num: '18', title: 'Tangerine Satin Saree', fabric: 'Ultra-smooth high-shine satin silk, fluid contemporary drape, 180 GSM', design: 'Sleek pre-stitched design, styled with side-swept curls and berry-toned lips', img: './assets/saree_05.webp' },
-      { num: '32', title: 'Modern Ethnic Drape', fabric: 'Hand-loom luxury linen-silk blend with fine zari border, 150 GSM', design: 'Contemporary ethnic drape, comfortable relaxed fit with traditional motifs', img: './assets/ladies_ethnic.webp' }
+      { num: '32', title: 'Modern Ethnic Drape', fabric: 'Hand-loom fine linen-silk blend with fine zari border, 150 GSM', design: 'Contemporary ethnic drape, comfortable relaxed fit with traditional motifs', img: './assets/ladies_ethnic.webp' }
     ],
     lounge: [
       { num: '19', title: 'Classic Ivory Kurti', fabric: 'Fine organic cotton with soft denim details, 140 GSM', design: 'Relaxed fitting kurti with high side-slits, styled with raw-edge detailing', img: './assets/lounge_01.webp' },
@@ -234,7 +234,7 @@ const initLookbookExplorer = () => {
       { num: '27', title: 'Dusty Rose Kurti Set', fabric: 'Pure organic cotton-linen blend, soft-washed finish, 160 GSM', design: 'Relaxed-fit tunic shirt paired with matching wide-leg palazzo pants', img: './assets/lounge_09.webp' },
       { num: '28', title: 'Boyfriend Denim & White Linen', fabric: 'Classic Belgian flax white linen and premium structured cotton denim, 200 GSM', design: 'Effortless weekend styling featuring a loose-fit button-down and relaxed denim', img: './assets/lounge_10.webp' },
       { num: '29', title: 'Mustard Tunic', fabric: 'Pure organic linen, colored with eco-friendly ochre pigments, 170 GSM', design: 'Earthy relaxed tunic with a minimal front slit and clean band collar', img: './assets/lounge_11.webp' },
-      { num: '30', title: 'Olive Sanctuary Robe', fabric: 'Luxury waffle-weave organic cotton, highly absorbent and soft, 320 GSM', design: 'Relaxed robe silhouette with wide sleeves, patch pockets, and waist tie', img: './assets/lounge_12.webp' },
+      { num: '30', title: 'Olive Sanctuary Robe', fabric: 'Fine waffle-weave organic cotton, highly absorbent and soft, 320 GSM', design: 'Relaxed robe silhouette with wide sleeves, patch pockets, and waist tie', img: './assets/lounge_12.webp' },
       { num: '33', title: 'Resort & Leisure Wear', fabric: '100% Belgian flax organic linen, pre-washed for ultimate softness, 180 GSM', design: 'Fluid loose-fitting resort coordinates, breezy silhouette for relaxed afternoons', img: './assets/resort_wear.webp' }
     ],
     kids: [

@@ -1,0 +1,6 @@
+# Robots.txt for Opulence & Heirloom
+User-agent: *
+Allow: /
+
+# Sitemap Location
+Sitemap: https://opulenceandheirloom.com/sitemap.xml

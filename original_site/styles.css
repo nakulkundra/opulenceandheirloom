@@ -130,7 +130,7 @@
 }
 
 @layer components {
-  /* --- Luxury Navigation --- */
+  /* --- Navigation --- */
   .header {
     position: fixed;
     top: 0;

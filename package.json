@@ -1,11 +1,11 @@
 {
   "name": "opulence-and-heirloom",
   "version": "1.0.0",
-  "description": "Ultra-premium luxury boutique website for Opulence & Heirloom",
+  "description": "Ultra-premium boutique website for Opulence & Heirloom",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node -e \"import('fs').then(fs => fs.cpSync('assets', 'dist/assets', { recursive: true }))\"",
     "preview": "vite preview"
   },
   "devDependencies": {
